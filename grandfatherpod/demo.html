@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+  
+<textarea id="rickys-blog-textarea" disabled="">Loading...</textarea>
+    
+  </body>
+</html>
+
+<script src="https://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
+
+<script>
+  const url = 'http://www.hellointernet.fm/podcast?format=rss'
+  const textarea = document.getElementById('rickys-blog-textarea')
+  feednami.load(url)
+    .then(feed => {
+      textarea.value = ''
+      console.log(feed)
+      for(let entry of feed.entries){
+        textarea.value += `${entry.title}\n${entry.link}\n\n`
+      }
+    })
+</script>
+
+<!-- instructions from https://www.raymondcamden.com/2015/12/08/parsing-rss-feeds-in-javascript-options -->
