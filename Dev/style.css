@@ -1,0 +1,120 @@
+/* Set up CSS Variables - this will let us change fonts around easily without having to change shit all over the place. */
+:root {
+    --main-font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+    --header-font-family: 'Caveat', cursive;
+    /* VARIABLE FONTS --> CSS PROPERTY Weight (wght) font-weight (100 "Thin --> 600 "Semibold") Width (wdth) font-stretch (As % of full width. Minimum 62.5%) */
+
+    --header-bg-color: 5,22,60;
+}
+
+
+body {
+    font-family: var(--main-font-family);
+    color:#fff;
+    text-align: center;
+    background-image:url(img/bg\ low\ res\ compress.jpg);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--main-font-family);
+    font-weight: normal;
+}
+
+main {
+    min-height: 100vh;
+}
+main header {
+    /* background-color: rgba(33, 44, 66, 0.4); Solid Dark-Grey Background */
+    min-height:85vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(var(--header-bg-color), 0.25) 60%,
+        rgba(0, 0, 0, .5)
+      );
+    padding-bottom: clamp(2em, 3em, 5em)
+}
+
+
+h1 {
+    font-family: var(--header-font-family);
+    font-size:8em;
+    padding-top:20vh;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 0.02em 0.02em 0.06em rgba(var(--header-bg-color), 0.5);
+}
+h2 {
+    text-transform: uppercase;
+    font-weight:450;
+    font-stretch:85%;
+    font-size:1.5em;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 0.03em 0.03em 0.05em rgb(var(--header-bg-color));
+}
+
+
+section {
+    background-color: rgba(11,11,22,.85);
+    display:block;
+}
+
+section > * {
+    padding:4em;
+}
+
+section div:last-child { 
+    background-size:cover;
+    background-position: center;
+}
+
+h3 {
+    font-family:var(--header-font-family);
+    font-size:2.5em;
+    font-weight:555;
+    padding-bottom:.5em;
+}
+
+form div {
+    margin-bottom:1.5em;
+}
+
+label {
+    text-align: right;
+    padding:0.5em;
+}
+input,
+textarea {
+  border:0;
+  border-bottom: 5px solid rgb(var(--header-bg-color));
+  background-color: rgba(255,255,255,0.8);
+  border-radius:0 0 0.5rem 0.5rem;
+  padding:0.5em;
+  margin:0 3em 0 1em;
+}
+
+input#submit {
+    background-color:#eee;
+    border-radius: 0.75rem;
+    padding:0.75em 1.5em 0.75em 1.5em; 
+}
+
+
+
+
+footer {
+    background-color: rgba(var(--header-bg-color), 0.85);
+    text-transform: lowercase;
+    font-size:0.5em;
+    padding:3em;
+}
+
+/* Oooooo mobile responsive layouts */
+@media (min-width:768px) {
+    section {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    form div {
+        display:grid;
+        grid-template-columns: 1fr 4fr;
+    }
+}

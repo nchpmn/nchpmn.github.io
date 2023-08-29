@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Main CSS Files -->
+        <link rel="stylesheet" href="reset-min.css">
+        <link rel="stylesheet" href="style-min.css">
+
+        <!-- CSS for Easy Scroll Dots -->
+        <link rel="stylesheet" href="dots/easyScrollDots-min.css">
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"-->
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">               
+        
+        <title>Nathan Chapman</title>
+    </head>
+
+    <body>
+        <section data-scroll-indicator-title="Hi There!">
+            <h1>Nathan Chapman</h1>
+            <h2><a onclick="scrollIndiClicked('News');">News Camera</a> &nbsp;&mdash;&nbsp; <a  onclick="scrollIndiClicked('Video Editor');">Video Editor</a> &nbsp;&mdash;&nbsp; <a  onclick="scrollIndiClicked('Tidbits');">Tidbits</a></h2>
+        </section>
+
+        <section data-scroll-indicator-title="News">
+            <div>
+                <h3>News Camera</h3>
+                <p>From Prime Ministers to natural disasters or local issues, every story is worth telling.</p>
+                <p>Whether a live cross, feature interview or the news chopper.</p>
+                <p><a href="http://youtube.com/nchpmn">Watch Showreel &rarr;</a></p>
+            </div>
+            <div>&nbsp;</div>
+        </section>
+
+        <section data-scroll-indicator-title="Video Editor">
+            <div>&nbsp;</div>
+            <div>
+                <h3>Video Editor</h3>
+            </div>
+
+        </section>
+
+        <section data-scroll-indicator-title="Tidbits">
+            <div>
+                <h3>Tidbits</h3>
+                <p>Short-form educational videos on Knowledge, Art, Science and History.</p>
+                <p>Written and Hosted.</p>
+                <p><a href="http://youtube.com/tidbits">Watch on YouTube &rarr;</a></p>
+            </div>
+            <div>&nbsp;</div>
+        </section>
+
+        <section data-scroll-indicator-title="Contact">
+            <h3>Get in Touch</h3>
+            <form>
+
+        </section>
+
+        <!-- JS for Easy Scroll Dots -->
+        <script type="text/javascript" src="dots/easyScrollDots.min.js"></script>
+        <script>
+            easyScrollDots({
+                'fixedNav': false,
+                'fixedNavId': '',
+                'fixedNavUpward': false,
+                'offset': 0
+            });
+        </script>
+    </body>
+</html>

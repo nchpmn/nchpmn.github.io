@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+        <meta name="robots" content="index, follow" />
+
+        <link rel="stylesheet" href="reset-min.css">
+        <link rel="stylesheet" href="style-min.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Noto+Serif:wdth,wght@62.5..100,100..600&display=swap" rel="stylesheet">        
+        <title>Nathan Chapman</title>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1>Nathan Chapman</h1>
+                <h2>News Camera &mdash; Camera Operator &mdash; Video Editor</h2>
+            </header>
+            
+            <section>
+                <div>
+                    <h3>Get in Touch</h3>
+                    <form method="post" action="https://formspree.io/nathan@nchp.mn">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" value="" />
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="_replyto" id="email" value="" />
+                        </div>
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="6"></textarea>
+                        </div>
+                        <input type="submit" name="submit" id="submit" value="Send Message" />
+                    
+                    <input type="hidden" name="_next" value="/thanks.html" />
+                    </form>
+                </div>
+
+                <div class="random">
+                    &nbsp;
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Feeding Vision Since 2011 &mdash; What are you doing down here?</p>
+        </footer>
+
+    </body>
+    <script>
+        // Your list of background images
+        const backgrounds = [
+        './img/instapic1.jpeg',
+        './img/instapic2.jpeg',
+        './img/instapic3.jpeg',
+        ];
+
+        // Pick a random index in the list of images
+        const randomIndex = Math.floor(Math.random() * Math.floor(backgrounds.length));
+
+        // Select the random background image
+        const backgroundImage = backgrounds[randomIndex];
+
+        // Set the background image of the document root, in this case <html>
+        document.getElementsByClassName("random")[0].style.backgroundImage = `url(${backgroundImage})`;
+    </script>
+</html>
