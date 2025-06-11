@@ -1,6 +1,13 @@
+/* Custom Fonts (self-hosted - other fonts from Google Fonts) */
+ @font-face {
+  font-family: Franchise;
+  src: url(assets/fonts/franchise/Franchise-Free-Bold.otf);
+}
+
 /* Set up CSS Variables - this will let us change fonts around easily without having to change shit all over the place. */
 :root {
     --main-font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    --brand-font-family: 'Franchise', Impact, 'Arial Black', Arial, Helvetica, sans-serif;
     /* VARIABLE FONTS --> CSS PROPERTY Weight (wght) font-weight (100 "Thin --> 600 "Semibold") Width (wdth) font-stretch (As % of full width. Minimum 62.5%) */
 
     --header-bg-color: 5,22,60;
@@ -31,7 +38,8 @@ section {
     display:grid;
 }
 section:nth-of-type(1) { 
-    background-color: rgb(var(--tidbits-orange));
+    background-color: rgb(var(--tidbits-white));
+    color: #333;
     display:block;
 }
 section:nth-of-type(2) { 
@@ -111,4 +119,19 @@ section p {
 }
 section p:last-child {
     margin:2em 0 0 0;
+}
+
+/* ==== HEADER ==== */
+section:nth-of-type(1) h1 {
+    font-family: var(--brand-font-family);
+    color: rgb(var(--tidbits-blue));
+    text-transform: uppercase;
+}
+section:nth-of-type(1) a, section:nth-of-type(1) a:link, section:nth-of-type(1) a:visited, section:nth-of-type(1) a:active, section:nth-of-type(1) a:hover {
+    color:#333;
+    text-decoration: none;
+    border-bottom: 0.05em rgba(51, 51, 51, 0.7) dotted;
+}
+section:nth-of-type(1) a:hover {
+    border-bottom:rgba(51, 51, 51, 1) solid;
 }
