@@ -34,8 +34,8 @@ body {
 
 section {
     height:100vh;
-    vertical-align: middle;
     display:grid;
+    vertical-align: middle;
 }
 section:nth-of-type(1) { 
     background-color: rgb(var(--tidbits-white));
@@ -83,10 +83,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 h1 {
-    font-size:8em;
+    font-size:12em;
     font-weight:800;
-    line-height:1em;
-    padding:1.75em 0 0.5em;
+    line-height:1.25em;
+    padding:0 0 0.5em;
 }
 h2 {
     font-size:2em;
@@ -122,6 +122,9 @@ section p:last-child {
 }
 
 /* ==== HEADER ==== */
+section:nth-of-type(1) { 
+    align-content:center;
+}
 section:nth-of-type(1) h1 {
     font-family: var(--brand-font-family);
     color: rgb(var(--tidbits-blue));
