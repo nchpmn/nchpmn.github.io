@@ -23,10 +23,14 @@
 
     <body>
         <section data-scroll-indicator-title="Hi There!">
-            <div>
+            <video autoplay muted loop id="header-video">
+                <source src="assets/header.mp4" type="video/mp4">
+            </video>
                 <h1>Tidbits</h1>
-                <h2><a onclick="scrollIndiClicked('Camera');">Camera</a> &nbsp;&mdash;&nbsp; <a  onclick="scrollIndiClicked('Edit');">Edit</a> &nbsp;&mdash;&nbsp; <a  onclick="scrollIndiClicked('Shows');">Shows</a></h2>
-            </div>
+                <h2><a onclick="scrollIndiClicked('Camera');">Camera</a> &nbsp;&mdash;&nbsp;
+                    <a  onclick="scrollIndiClicked('Edit');">Edit</a> &nbsp;&mdash;&nbsp;
+                    <a  onclick="scrollIndiClicked('Shows');">Shows</a>
+                </h2>
         </section>
 
         <section data-scroll-indicator-title="Camera">

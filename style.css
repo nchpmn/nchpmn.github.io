@@ -23,13 +23,16 @@
     --tidbits-green: 155, 197, 61;
     --tidbits-blue: 55, 166, 214;
     --tidbits-white: 245, 245, 245;
+    --tidbits-black: 51, 51, 51;
 
 }
 
 body {
     font-family:var(--main-font-family);
     text-align: center;
-    color:#fff;
+    color:rgb(var(--tidbits-white));
+    background-color: rgb(var(--tidbits-black));
+
 }
 
 section {
@@ -38,7 +41,7 @@ section {
     vertical-align: middle;
 }
 section:nth-of-type(1) { 
-    background-color: rgb(var(--tidbits-white));
+    background-color: rgb(var(--tidbits-black));
     color: #333;
     display:block;
 }
@@ -124,17 +127,18 @@ section p:last-child {
 /* ==== HEADER ==== */
 section:nth-of-type(1) { 
     align-content:center;
+    background:transparent;
+}
+section:nth-of-type(1) video {
+  position:absolute;
+  top: 0;
+  left: 0;
+  min-width: 110%;
+  min-height: 110%;
+  z-index: -1000;
 }
 section:nth-of-type(1) h1 {
     font-family: var(--brand-font-family);
     color: rgb(var(--tidbits-blue));
     text-transform: uppercase;
-}
-section:nth-of-type(1) a, section:nth-of-type(1) a:link, section:nth-of-type(1) a:visited, section:nth-of-type(1) a:active, section:nth-of-type(1) a:hover {
-    color:#333;
-    text-decoration: none;
-    border-bottom: 0.05em rgba(51, 51, 51, 0.7) dotted;
-}
-section:nth-of-type(1) a:hover {
-    border-bottom:rgba(51, 51, 51, 1) solid;
 }
