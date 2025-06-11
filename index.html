@@ -6,11 +6,11 @@
         <meta name="robots" content="index, follow" />
 
         <!-- Main CSS Files -->
-        <link rel="stylesheet" href="reset.min.css">
-        <link rel="stylesheet" href="style.min.css">
+        <link rel="stylesheet" href="assets/css/reset.min.css">
+        <link rel="stylesheet" href="assets/css/style.min.css">
 
         <!-- CSS for Easy Scroll Dots -->
-        <link rel="stylesheet" href="dots/easyScrollDots-min.css">
+        <link rel="stylesheet" href="assets/dots/easyScrollDots-min.css">
         
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,12 +63,29 @@
 
         <section data-scroll-indicator-title="Contact">
             <h3>Get in Touch</h3>
-            <form>
+            <form method="post" action="https://formspree.io/nathan@nchp.mn">
+                <div class="field half first">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" value="" />
+                </div>
+                <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="email" name="_replyto" id="email" value="" />
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="6"></textarea>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+                </ul>
+                <input type="hidden" name="_next" value="/thanks.html" />
+            </form>
 
         </section>
 
         <!-- JS for Easy Scroll Dots -->
-        <script type="text/javascript" src="dots/easyScrollDots.min.js"></script>
+        <script type="text/javascript" src="assets/dots/easyScrollDots.min.js"></script>
         <script>
             easyScrollDots({
                 'fixedNav': false,

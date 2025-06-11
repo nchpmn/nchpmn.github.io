@@ -1,7 +1,7 @@
 /* Custom Fonts (self-hosted - other fonts from Google Fonts) */
  @font-face {
   font-family: Franchise;
-  src: url(assets/fonts/franchise/Franchise-Free-Bold.otf);
+  src: url(../fonts/franchise/Franchise-Free-Bold.otf);
 }
 
 /* Set up CSS Variables - this will let us change fonts around easily without having to change shit all over the place. */
@@ -48,7 +48,7 @@ section:nth-of-type(2) {
     grid-template-columns: var(--column-content) var(--column-image);
 }
 section:nth-of-type(2) div:nth-of-type(2) {
-    background-image:url("img/instapic1.jpeg");
+    background-image:url("../../img/instapic1.jpeg");
     background-size:cover;
     background-position: center;
     filter: var(--image-filter);
@@ -59,7 +59,7 @@ section:nth-of-type(3) {
     grid-template-columns: var(--column-image) var(--column-content);
 }
 section:nth-of-type(3) div:nth-of-type(1) {
-    background-image:url("img/bg\ low\ res.jpg");
+    background-image:url("../../img/bg\ low\ res.jpg");
     background-size:cover;
     background-position: center;
     filter: var(--image-filter);
@@ -70,7 +70,7 @@ section:nth-of-type(4) {
     grid-template-columns: var(--column-content) var(--column-image);
 }
 section:nth-of-type(4) div:nth-of-type(2) {
-    background-image:url("img/science.webp");
+    background-image:url("../../img/science.webp");
     background-size:cover;
     background-position: center;
     filter: var(--image-filter);
