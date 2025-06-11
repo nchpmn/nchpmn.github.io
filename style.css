@@ -77,14 +77,14 @@ section:nth-of-type(4) div:nth-of-type(2) {
 }
 
 section:nth-of-type(5) { 
-    background-color: rgb(var(--tidbits-yellow));
+    background-color: rgb(var(--tidbits-black));
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 h1 {
-    font-size:12em;
+    font-size:14em;
     font-weight:800;
     line-height:1.25em;
     padding:0 0 0.5em;
@@ -140,4 +140,19 @@ section:nth-of-type(1) h1 {
     font-family: var(--brand-font-family);
     color: rgb(var(--tidbits-blue));
     text-transform: uppercase;
+}
+section:nth-of-type(1) a:nth-of-type(1):hover {
+    border-bottom:rgba(var(--tidbits-red), 1) solid;
+}
+section:nth-of-type(1) a:nth-of-type(2):hover {
+    border-bottom:rgba(var(--tidbits-blue), 1) solid;
+}
+section:nth-of-type(1) a:nth-of-type(3):hover {
+    border-bottom:rgba(var(--tidbits-green), 1) solid;
+}
+
+
+/* === VIDEO === */
+section:nth-of-type(2) dev:first-of-type {
+    align-content: center;
 }
