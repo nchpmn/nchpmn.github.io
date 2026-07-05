@@ -1,0 +1,13 @@
+Title: Contact
+
+----
+
+Headline: [Placeholder heading, e.g. "Let's work together"]
+
+----
+
+Intro: [Placeholder short intro line above the contact form.]
+
+----
+
+Uuid: lqsj6zsqmxlogx25

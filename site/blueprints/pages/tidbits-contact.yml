@@ -1,0 +1,13 @@
+title: Tidbits - Contact
+
+columns:
+  - width: 1/1
+    fields:
+      headline:
+        label: Title
+        type: text
+        required: true
+      intro:
+        label: Intro text
+        type: textarea
+        size: small

@@ -1,0 +1,21 @@
+Title: Placeholder post title one
+
+----
+
+Headline: [Placeholder post title one]
+
+----
+
+Date: 2026-03-01
+
+----
+
+Blurb: [One-line placeholder excerpt.]
+
+----
+
+Main-content: [{"content":{"text":"<p>[Placeholder full article body text goes here.]</p>"},"id":"block-1","isHidden":false,"type":"text"}]
+
+----
+
+Uuid: x2wzrurig6cmacsg

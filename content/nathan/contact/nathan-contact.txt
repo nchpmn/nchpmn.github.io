@@ -1,0 +1,13 @@
+Title: Contact
+
+----
+
+Headline: [Placeholder heading, e.g. "Get in touch"]
+
+----
+
+Intro: [Placeholder short intro line above the contact form.]
+
+----
+
+Uuid: clv8uzdzqndcqifl

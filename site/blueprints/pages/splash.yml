@@ -1,0 +1,10 @@
+title: Splash
+
+options:
+  changeTemplate: false
+  changeStatus: false
+
+fields:
+  info:
+    type: info
+    text: "This page is just the two-way splash. Nothing to edit here - copy for each half lives in the template for now, since it's identical across both sites' entry point."

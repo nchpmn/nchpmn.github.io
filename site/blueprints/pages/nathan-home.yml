@@ -1,0 +1,23 @@
+title: Nathan - Home
+
+columns:
+  - width: 1/1
+    fields:
+      headline:
+        label: Title
+        type: text
+        required: true
+      subtitle:
+        label: Subtitle
+        type: text
+      blurb:
+        label: Blurb
+        type: textarea
+        size: small
+
+  - width: 1/1
+    sections:
+      pages:
+        label: Pages
+        type: pages
+        layout: list
