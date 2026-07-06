@@ -1,0 +1,21 @@
+[data-theme="tidbits"]{
+  --bg:#0d0d0d;
+  --fg:#ffffff;
+  --accent:#37a6d6;
+  --accent2:#fce644;
+  --accent3:#9bc53d;
+  --accent4:#e85545;
+  --accent5:#fa8535;
+}
+body[data-theme="tidbits"]{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"Tidbits Slab (placeholder)","Arial Black",sans-serif;
+  font-weight:700;
+}
+[data-theme="tidbits"] .nav-menu a:hover,
+[data-theme="tidbits"] a.text-link:hover{color:var(--accent);}
+[data-theme="tidbits"] .accent{color:var(--accent);}
+
+.splash-tidbits{background:#0d0d0d;color:#ffffff;font-weight:700;}
+.splash-tidbits:hover{box-shadow:inset 0 -4px 0 0 #37a6d6;}

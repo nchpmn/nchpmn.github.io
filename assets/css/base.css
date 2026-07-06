@@ -1,0 +1,215 @@
+:root{
+  --container-width:1100px;
+  --gutter:1.5rem;
+  --nav-height:4.25rem;
+  --space-1:.5rem;
+  --space-2:1rem;
+  --space-3:2rem;
+  --space-4:4rem;
+  --space-5:7rem;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:auto;}
+body{margin:0;min-height:100vh;}
+a{color:inherit;}
+img,svg{max-width:100%;display:block;}
+ul{margin:0;padding:0;}
+
+/* ---- Splash (landing page only, / exclusively) ---- */
+#splash{
+  height:100vh;
+  display:flex;
+  flex-direction:row;
+  overflow:hidden;
+}
+.splash-half{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  cursor:pointer;
+  transition:flex .35s ease;
+}
+.splash-half span{
+  font-size:clamp(4rem,11vw,12rem);
+  line-height:1.02;
+  letter-spacing:.01em;
+  text-align:center;
+  padding:0 1.5rem;
+}
+.splash-half:hover{flex:1.15;}
+@media (max-width:720px){
+  #splash{flex-direction:column;}
+  .splash-half span{
+    font-size:16vw;
+    line-height:1;
+    padding:0 3vw;
+  }
+}
+
+/* ---- Compact site nav (swap left / menu right) ---- */
+#sitenav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  height:var(--nav-height);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 var(--gutter);
+  border-bottom:1px solid currentColor;
+}
+#sitenav:empty{display:none;border:none;height:0;}
+.swap-link{
+  background:none;
+  border:1px solid currentColor;
+  color:inherit;
+  font:inherit;
+  text-decoration:none;
+  display:inline-block;
+  padding:.4rem .9rem;
+}
+.nav-menu{
+  display:flex;
+  gap:var(--space-3);
+  list-style:none;
+}
+.nav-menu a{text-decoration:none;}
+
+/* ---- Content ---- */
+#content{
+  max-width:var(--container-width);
+  margin:0 auto;
+  padding:var(--space-4) var(--gutter);
+  min-height:50vh;
+}
+#content section + section{margin-top:var(--space-5);}
+
+/* ---- Footer ---- */
+#sitefooter{
+  padding:var(--space-3) var(--gutter);
+  text-align:center;
+  font-size:.8rem;
+  border-top:1px solid currentColor;
+}
+#sitefooter:empty{display:none;border:none;padding:0;}
+
+/* ---- Generic placeholder building blocks ---- */
+.placeholder-box{
+  background:currentColor;
+  opacity:.08;
+  aspect-ratio:16/10;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.placeholder-box span{opacity:.9;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:var(--space-3);
+  margin-top:var(--space-2);
+}
+.card h3{margin:.75rem 0 .25rem;font-size:1rem;}
+.card p{margin:0;opacity:.7;font-size:.9rem;}
+
+.section-heading{
+  font-size:.85rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  opacity:.6;
+  margin:0 0 var(--space-2);
+}
+
+form.contact-form{display:flex;flex-direction:column;gap:var(--space-2);max-width:480px;margin-top:var(--space-2);}
+form.contact-form input,form.contact-form textarea{
+  background:transparent;
+  border:1px solid currentColor;
+  color:inherit;
+  font:inherit;
+  padding:.6rem .75rem;
+}
+form.contact-form button{
+  align-self:flex-start;
+  background:none;
+  border:1px solid currentColor;
+  color:inherit;
+  font:inherit;
+  padding:.6rem 1.25rem;
+  cursor:pointer;
+}
+
+/* ---- Tidbits showreel (rough - revisit in the design pass) ---- */
+.showreel-wrap{
+  position:relative;
+  height:100vh;
+  overflow:hidden;
+}
+.showreel-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  pointer-events:none;
+}
+.showreel-overlay{
+  position:relative;
+  z-index:1;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:var(--space-3);
+  text-align:center;
+}
+.showreel-logo{max-width:280px;}
+.showreel-logo-placeholder{
+  font-size:.8rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  opacity:.7;
+}
+.showreel-links{display:flex;gap:var(--space-3);}
+.showreel-links a{text-decoration:none;border:1px solid currentColor;padding:.5rem 1rem;}
+
+/* ---- Portfolio grid: thumbnail only, title+date on hover ---- */
+.portfolio-thumb{
+  position:relative;
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  aspect-ratio:16/10;
+  overflow:hidden;
+}
+.portfolio-thumb img{width:100%;height:100%;object-fit:cover;}
+.portfolio-thumb-info{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:.25rem;
+  background:rgba(0,0,0,.6);
+  opacity:0;
+  transition:opacity .2s ease;
+}
+.portfolio-thumb-info h3{margin:0;font-size:1rem;}
+.portfolio-thumb-info p{margin:0;font-size:.85rem;opacity:.8;}
+.portfolio-thumb:hover .portfolio-thumb-info{opacity:1;}
+
+/* ---- Footer links ---- */
+.footer-links{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap:var(--space-2);
+  margin-top:var(--space-1);
+  padding:0;
+}
+.footer-links a{text-decoration:none;}
